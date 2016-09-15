@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NSURLTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="142" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LC9-nA-JsM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="142" id="8JI-Eh-LtB" customClass="MyCell" customModule="NSURLTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="142"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8JI-Eh-LtB" id="r5r-4R-3NK">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="141.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ss-Cr-SQs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="141.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6ss-Cr-SQs" firstAttribute="leading" secondItem="r5r-4R-3NK" secondAttribute="leading" id="A5K-Pa-RZp"/>
+                                                <constraint firstItem="6ss-Cr-SQs" firstAttribute="top" secondItem="r5r-4R-3NK" secondAttribute="top" id="Mxd-Vm-vBT"/>
+                                                <constraint firstAttribute="bottom" secondItem="6ss-Cr-SQs" secondAttribute="bottom" id="ZLK-tM-wsT"/>
+                                                <constraint firstAttribute="trailing" secondItem="6ss-Cr-SQs" secondAttribute="trailing" id="nvl-Ls-MYs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backgroundImage" destination="6ss-Cr-SQs" id="WFI-jk-0do"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Xss-cA-8ZD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Fnq-Ua-gnk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LC9-nA-JsM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="5On-iu-Ix8"/>
+                            <constraint firstItem="LC9-nA-JsM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Hm3-UF-CDL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LC9-nA-JsM" secondAttribute="trailing" constant="-20" id="cgV-qp-exQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LC9-nA-JsM" secondAttribute="bottom" id="hCc-vX-SvI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="LC9-nA-JsM" id="Mep-hV-DOP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272" y="222"/>
+        </scene>
+    </scenes>
+</document>
